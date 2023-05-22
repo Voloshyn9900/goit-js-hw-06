@@ -12,3 +12,45 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const elementLiEl = document.querySelector(".gallery");
+
+const arrImgEl = images.map(({ url, alt } = {}) => {
+  return `
+  <li class="gallery-item">
+    <img src="${url}" alt="${alt}" class="img-item">
+  </li>`;
+});
+
+console.log(arrImgEl);
+
+elementLiEl.insertAdjacentHTML("beforeend", arrImgEl);
+
+
+
+// СТИЛИЗАЦИЯ БЬЫЛА ВЫПОЛНЕНА ИНЛАЙНОМ В html, В ЗАДЧА НЕ БЫЛО ЧЕТКО УКАЗАНО КАК НУЖНО БЫЛО ВЫПОЛНИТЬ СТИЛИЗАЦИЮ
+{/* <style>
+      .gallery-item {
+        display: flex;
+        justify-content: center;
+        background-size: contain;
+      }
+      .img-item {
+        display: flex;
+        width: 400px;
+        background-size: contain;
+      }
+</style> */}
+
+
+
+
+// Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть список ul.gallery.
+
+// <ul class="gallery"></ul>
+
+// Используй массив объектов images для создания элементов <img> вложенных в <li>. Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
+
+// Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+// Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.

@@ -6,6 +6,9 @@ inputEl.addEventListener("input", onInputChange);
 function onInputChange(event) {
   console.log(event.currentTarget.value);
   spanEl.textContent = inputEl.value;
+  if (inputEl.value === "") {
+    spanEl.textContent = "Anonymous";
+  }
 }
 
 // Напиши скрипт который, при наборе текста в инпуте input#name - input(событие input),
